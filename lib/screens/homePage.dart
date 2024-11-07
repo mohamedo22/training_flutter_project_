@@ -11,7 +11,7 @@ class Homepage extends StatelessWidget {
       return Scaffold(
           body: Column(
             children: [
-              ListView.builder(itemBuilder: (context, index) => 
+              Expanded(child: ListView.builder(itemBuilder: (context, index) => 
               Container(
                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
                 child: Column(
@@ -24,7 +24,7 @@ class Homepage extends StatelessWidget {
                 ),
               ) , 
               itemCount: providerObject.myModel?.products.length ,
-               )
+              ))
             ],
           ),
 
